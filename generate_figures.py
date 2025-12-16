@@ -1,6 +1,6 @@
-"""
+﻿"""
 生成论文所需图片
-- fig6.png: FinLoom系统架构图（重画，学术风格）
+- fig6.png: AlgoVoice系统架构图（重画，学术风格）
 - fig_llm_evolution.png: 金融大模型技术演进图
 - fig_industry_allocation.png: 行业配置动态变化图
 - fig_system_diagram.png: 系统核心计算流程图
@@ -19,7 +19,7 @@ plt.rcParams['axes.linewidth'] = 1.2
 plt.rcParams['figure.dpi'] = 300
 
 # ============================================================================
-# 图1: FinLoom系统架构图 (fig6.png) - 重新设计
+# 图1: AlgoVoice系统架构图 (fig6.png) - 重新设计
 # ============================================================================
 
 def create_system_architecture():
@@ -115,7 +115,7 @@ def create_system_architecture():
             ax.add_patch(arrow)
     
     # 添加标题
-    ax.text(5, 9.5, 'FinLoom Intelligent Quantitative Investment System Architecture',
+    ax.text(5, 9.5, 'AlgoVoice Intelligent Quantitative Investment System Architecture',
             ha='center', va='center', fontsize=13, fontweight='bold',
             color='#1A237E')
     
@@ -224,7 +224,7 @@ def create_system_diagram():
                                 edgecolor='none', alpha=0.8))
     
     # 添加标题
-    ax.text(5, 9.5, 'Core Computation Flow of FinLoom System',
+    ax.text(5, 9.5, 'Core Computation Flow of AlgoVoice System',
             ha='center', va='center', fontsize=13, fontweight='bold',
             color='#1A237E')
     
@@ -474,7 +474,7 @@ def create_industry_allocation():
     ax.set_ylim(0, 100)
     ax.set_xlabel('Year', fontsize=12, fontweight='bold')
     ax.set_ylabel('Portfolio Allocation (%)', fontsize=12, fontweight='bold')
-    ax.set_title('Dynamic Industry Allocation of FinLoom Strategy (2015-2024)',
+    ax.set_title('Dynamic Industry Allocation of AlgoVoice Strategy (2015-2024)',
                  fontsize=14, fontweight='bold', pad=20)
     
     # 网格

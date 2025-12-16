@@ -1,4 +1,4 @@
-"""
+﻿"""
 重新生成fig15 - 确保数据与表格一致
 """
 
@@ -24,7 +24,7 @@ n_points = len(months)
 years = np.array([(m - start_date).days / 365.25 + 2015 for m in months])
 
 # 根据表格数据生成收益曲线
-# FinLoom: 累计287.4%, 年化15.2%, 最大回撤-21.7%
+# AlgoVoice: 累计287.4%, 年化15.2%, 最大回撤-21.7%
 # 移动均线: 累计45.2%, 年化3.8%, 最大回撤-35.8%
 # RSI: 累计38.7%, 年化3.3%, 最大回撤-42.3%
 # 布林带: 累计52.3%, 年化4.3%, 最大回撤-38.2%
@@ -82,7 +82,7 @@ def generate_return_curve(years, final_cum_return, annual_return, max_dd, volati
     return (curve_smooth - 1) * 100  # 转换为百分比
 
 # 生成各策略曲线
-finloom = generate_return_curve(years, 2.874, 0.152, 0.217, 0.183)
+AlgoVoice = generate_return_curve(years, 2.874, 0.152, 0.217, 0.183)
 ma = generate_return_curve(years, 0.452, 0.038, 0.358, 0.221)
 rsi = generate_return_curve(years, 0.387, 0.033, 0.423, 0.245)
 bb = generate_return_curve(years, 0.523, 0.043, 0.382, 0.218)
@@ -93,7 +93,7 @@ equal = generate_return_curve(years, 0.412, 0.035, 0.431, 0.232)
 fig, ax = plt.subplots(figsize=(14, 8))
 
 # 绘制曲线
-ax.plot(years, finloom, linewidth=2.5, label='FinLoom智能策略', color='#5B21B6', zorder=5)
+ax.plot(years, AlgoVoice, linewidth=2.5, label='AlgoVoice智能策略', color='#5B21B6', zorder=5)
 ax.plot(years, ma, linewidth=1.8, label='移动均线', color='#DC2626', alpha=0.8)
 ax.plot(years, rsi, linewidth=1.8, label='RSI', color='#16A34A', alpha=0.8)
 ax.plot(years, bb, linewidth=1.8, label='布林带', color='#EA580C', alpha=0.8)
@@ -116,7 +116,7 @@ for x, text, color in events:
 
 # 标注最终收益率
 final_positions = [
-    (years[-1], finloom[-1], f'FinLoom: +287.4%', '#5B21B6', 'right'),
+    (years[-1], AlgoVoice[-1], f'AlgoVoice: +287.4%', '#5B21B6', 'right'),
     (years[-1], ma[-1], f'MA: +45.2%', '#DC2626', 'right'),
     (years[-1], rsi[-1], f'RSI: +38.7%', '#16A34A', 'right'),
     (years[-1], bb[-1], f'BB: +52.3%', '#EA580C', 'right'),
@@ -160,7 +160,7 @@ plt.tight_layout()
 plt.savefig('fig15.png', dpi=300, bbox_inches='tight', facecolor='white')
 print("✓ 重新生成 fig15.png - 数据已与表格一致!")
 print("\n最终收益率:")
-print(f"  FinLoom智能: {finloom[-1]:.1f}% (目标: 287.4%)")
+print(f"  AlgoVoice智能: {AlgoVoice[-1]:.1f}% (目标: 287.4%)")
 print(f"  移动均线: {ma[-1]:.1f}% (目标: 45.2%)")
 print(f"  RSI: {rsi[-1]:.1f}% (目标: 38.7%)")
 print(f"  布林带: {bb[-1]:.1f}% (目标: 52.3%)")

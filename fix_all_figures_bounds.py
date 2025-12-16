@@ -1,4 +1,4 @@
-"""
+﻿"""
 修复所有图片的边界问题，确保内容完整显示
 """
 
@@ -97,7 +97,7 @@ def create_architecture_fixed():
             ax.add_patch(arrow)
     
     # 标题
-    ax.text(5, 9.8, 'FinLoom System Architecture',
+    ax.text(5, 9.8, 'AlgoVoice System Architecture',
             ha='center', va='center', fontsize=16, fontweight='bold',
             color='#1A237E')
     
@@ -366,7 +366,7 @@ def create_industry_fixed():
 
 def create_radar_fixed():
     strategies = {
-        'FinLoom': {'Return': 20.2, 'Sharpe': 0.94, 'Calmar': 0.93, 'Risk': 21.7, 'Vol': 18.3},
+        'AlgoVoice': {'Return': 20.2, 'Sharpe': 0.94, 'Calmar': 0.93, 'Risk': 21.7, 'Vol': 18.3},
         'MA': {'Return': 3.8, 'Sharpe': 0.04, 'Calmar': 0.11, 'Risk': 35.8, 'Vol': 22.1},
         'RSI': {'Return': 9.6, 'Sharpe': 0.27, 'Calmar': 0.23, 'Risk': 42.3, 'Vol': 24.5},
         'Bollinger': {'Return': 4.6, 'Sharpe': 0.07, 'Calmar': 0.12, 'Risk': 38.2, 'Vol': 21.8}
@@ -387,7 +387,7 @@ def create_radar_fixed():
     
     fig, ax = plt.subplots(figsize=(9, 9), subplot_kw=dict(projection='polar'))
     
-    colors_radar = {'FinLoom': '#5B21B6', 'MA': '#DC2626', 
+    colors_radar = {'AlgoVoice': '#5B21B6', 'MA': '#DC2626', 
                    'RSI': '#16A34A', 'Bollinger': '#EA580C'}
     
     for strategy_name, metrics in strategies.items():

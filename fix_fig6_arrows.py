@@ -1,4 +1,4 @@
-"""
+﻿"""
 修复fig6：
 1. 确保箭头头部完整显示
 2. 添加左侧数据流指示箭头
@@ -124,7 +124,7 @@ def create_fixed_architecture():
             color=colors['border'], rotation=90)
     
     # 标题
-    ax.text(5, 9.7, 'FinLoom System Architecture',
+    ax.text(5, 9.7, 'AlgoVoice System Architecture',
             ha='center', va='center', fontsize=17, fontweight='bold',
             color='#1A237E')
     

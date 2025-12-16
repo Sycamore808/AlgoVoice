@@ -1,4 +1,4 @@
-"""
+﻿"""
 修复系统流程图，让箭头更清晰明显
 """
 
@@ -170,7 +170,7 @@ def create_clear_flow_with_arrows():
             color='#FF3D00')
     
     # 标题
-    ax.text(7, 9.7, 'FinLoom System - Core Computation Flow',
+    ax.text(7, 9.7, 'AlgoVoice System - Core Computation Flow',
             ha='center', va='center', fontsize=18, fontweight='bold',
             color='#1A237E',
             bbox=dict(boxstyle='round,pad=0.6', facecolor='#E8F5E9',

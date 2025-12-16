@@ -1,4 +1,4 @@
-"""
+﻿"""
 生成高质量图片：
 - fig6: 系统架构图（优化版）
 - fig17: 策略综合性能雷达图（重画）
@@ -226,7 +226,7 @@ def create_optimized_architecture():
     )
     ax.add_patch(title_box)
     
-    ax.text(7, 9.55, 'FinLoom Intelligent Quantitative Investment System Architecture',
+    ax.text(7, 9.55, 'AlgoVoice Intelligent Quantitative Investment System Architecture',
             ha='center', va='center', fontsize=13, fontweight='bold',
             color=colors['text'])
     
@@ -256,11 +256,11 @@ def create_optimized_architecture():
 
 def create_radar_chart():
     # 根据原图fig15的真实数据计算
-    # FinLoom: 532.4% 累计收益
+    # AlgoVoice: 532.4% 累计收益
     # 假设10年，年化收益 = (1 + 5.324)^(1/10) - 1 ≈ 20.3%
     
     strategies = {
-        'FinLoom': {
+        'AlgoVoice': {
             'Return': 20.3,      # 年化收益率 (假设值)
             'Stability': 85,     # 稳定性得分 (基于IC)
             'Risk Control': 80,  # 风险控制 (基于最大回撤)
@@ -308,7 +308,7 @@ def create_radar_chart():
     
     # 配色方案（与行业配置图一致）
     colors_radar = {
-        'FinLoom': '#5B21B6',
+        'AlgoVoice': '#5B21B6',
         'MA': '#DC2626',
         'RSI': '#16A34A',
         'Bollinger': '#EA580C'

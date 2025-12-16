@@ -1,4 +1,4 @@
-"""
+﻿"""
 使用真实数据重新生成：
 - fig6: 清爽简洁的系统架构图
 - fig17: 真实数据的雷达图（调整归一化方式增强区分度）
@@ -107,7 +107,7 @@ def create_clean_architecture():
             ax.add_patch(arrow)
     
     # 标题
-    ax.text(5, 9.5, 'FinLoom System Architecture',
+    ax.text(5, 9.5, 'AlgoVoice System Architecture',
             ha='center', va='center', fontsize=14, fontweight='bold',
             color='#1A237E')
     
@@ -124,7 +124,7 @@ def create_clean_architecture():
 def create_radar_with_real_data():
     # 使用真实数据（从表格）
     strategies = {
-        'FinLoom': {
+        'AlgoVoice': {
             'Annual Return': 20.2,
             'Sharpe Ratio': 0.94,
             'Calmar Ratio': 0.93,
@@ -189,7 +189,7 @@ def create_radar_with_real_data():
     
     # 配色
     colors_radar = {
-        'FinLoom': '#5B21B6',
+        'AlgoVoice': '#5B21B6',
         'MA': '#DC2626',
         'RSI': '#16A34A',
         'Bollinger': '#EA580C'

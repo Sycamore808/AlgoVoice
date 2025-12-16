@@ -23,8 +23,8 @@
 
 ```
 AlgoVoice/
-├── FinLoom-server-main/       # 稳定版本
-├── FinLoom-server-develop/    # 开发版本（包含最新功能）
+├── AlgoVoice-server-main/       # 稳定版本
+├── AlgoVoice-server-develop/    # 开发版本（包含最新功能）
 │   ├── backtest_baostock/    # 回测系统
 │   ├── web-vue/              # Web前端
 │   └── module_XX/            # 11个核心模块
@@ -36,7 +36,7 @@ AlgoVoice/
 ### 方式1：使用稳定版本
 
 ```bash
-cd FinLoom-server-main
+cd AlgoVoice-server-main
 pip install -r requirements.txt
 python main.py
 ```
@@ -45,14 +45,14 @@ python main.py
 
 #### Windows用户
 ```bash
-cd FinLoom-server-develop
+cd AlgoVoice-server-develop
 首次安装.bat
 启动.bat
 ```
 
 #### Linux/Mac用户
 ```bash
-cd FinLoom-server-develop
+cd AlgoVoice-server-develop
 pip install -r requirements.txt
 python main.py
 ```
@@ -60,7 +60,7 @@ python main.py
 ### 回测系统
 
 ```bash
-cd FinLoom-server-develop/backtest_baostock
+cd AlgoVoice-server-develop/backtest_baostock
 快速测试.bat
 ```
 
@@ -74,9 +74,9 @@ cd FinLoom-server-develop/backtest_baostock
 
 ## 📖 详细文档
 
-- [系统架构](FinLoom-server-develop/docs/)
-- [回测系统使用](FinLoom-server-develop/backtest_baostock/README.txt)
-- [Web前端开发](FinLoom-server-develop/web-vue/README.md)
+- [系统架构](AlgoVoice-server-develop/docs/)
+- [回测系统使用](AlgoVoice-server-develop/backtest_baostock/README.txt)
+- [Web前端开发](AlgoVoice-server-develop/web-vue/README.md)
 
 ## 📄 许可证
 
