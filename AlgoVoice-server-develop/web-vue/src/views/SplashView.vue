@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 import { onMounted, onUnmounted, ref, useTemplateRef, watch } from 'vue';
 import { useRouter } from 'vue-router'
@@ -425,9 +425,9 @@ onUnmounted(() => {
     <!-- Logo容器 -->
     <div class="logo-container">
       <p class="animated-text-wrapper">
-        <span class="top-text">FIN-R1 Empowered Adaptive Quantitative Investment Engine</span>
+        <span class="top-text">AI Model Empowered Adaptive Quantitative Investment Engine</span>
         <span class="main-text">FinLoom金织</span>
-        <span class="bottom-text">FIN-R1赋能的自适应量化投资引擎</span>
+        <span class="bottom-text">AI Model赋能的自适应量化投资引擎</span>
       </p>
     </div>
 

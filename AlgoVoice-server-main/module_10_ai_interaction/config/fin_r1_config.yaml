@@ -1,7 +1,7 @@
-﻿# FIN-R1模型配置文件
+﻿# AI Model模型配置文件
 model:
   # 模型路径（相对于AlgoVoice-server目录）
-  model_path: ".Fin-R1"
+  model_path: ".AI Model"
   
   # 设备配置
   device: "cpu"  # 可选: "cpu", "cuda", "mps"
@@ -21,7 +21,7 @@ model:
   
   # 缓存配置
   use_cache: true
-  cache_dir: "cache/fin_r1"
+  cache_dir: "cache/AI_Model"
 
 # 提示词模板
 prompts:

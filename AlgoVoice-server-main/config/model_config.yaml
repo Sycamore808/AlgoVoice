@@ -1,8 +1,8 @@
-# 模型配置文件
+﻿# 模型配置文件
 
-# FIN-R1模型配置
-fin_r1:
-  model_path: ".Fin-R1"
+# AI Model模型配置
+AI_Model:
+  model_path: ".AI Model"
   device: "cpu"  # or "cuda" if GPU available
   batch_size: 32
   max_length: 512

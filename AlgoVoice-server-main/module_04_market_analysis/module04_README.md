@@ -7,14 +7,14 @@
 ## 🚀 主要特性
 
 ### 1. 多智能体分析系统
-- **情感分析师**: 集成FIN-R1模型和新闻情感分析
+- **情感分析师**: 集成AI Model模型和新闻情感分析
 - **基本面分析师**: 财务数据和宏观经济分析  
 - **技术分析师**: 技术指标和图表形态识别
 - **风险管理师**: 风险评估和投资建议
 - **智能体协调器**: 多轮辩论和共识构建
 
 ### 2. 增强的情感分析
-- **FIN-R1模型集成**: 专业金融文本情感分析
+- **AI Model模型集成**: 专业金融文本情感分析
 - **新闻情感分析**: 实时新闻和社交媒体情绪追踪
 - **市场情感聚合**: 多源情感数据综合分析
 - **情感趋势追踪**: 历史情感变化趋势分析
@@ -53,7 +53,7 @@ conda activate study
 
 # 确保必要的依赖包已安装
 pip install fastapi uvicorn pandas numpy scipy scikit-learn
-pip install transformers torch  # 用于FIN-R1模型
+pip install transformers torch  # 用于AI Model模型
 ```
 
 ### 数据库初始化
@@ -68,7 +68,7 @@ pip install transformers torch  # 用于FIN-R1模型
 
 ```python
 import asyncio
-from module_04_market_analysis.sentiment_analysis.fin_r1_sentiment import get_sentiment_analyzer
+from module_04_market_analysis.sentiment_analysis.AI_Model_sentiment import get_sentiment_analyzer
 
 async def basic_example():
     # 基础情感分析
@@ -210,7 +210,7 @@ curl "http://localhost:8000/api/v1/market/health"
 #### 1. Python程序调用
 ```python
 # 在其他模块中导入和使用
-from module_04_market_analysis.sentiment_analysis.fin_r1_sentiment import (
+from module_04_market_analysis.sentiment_analysis.AI_Model_sentiment import (
     get_sentiment_analyzer,
     analyze_symbol_sentiment,
     analyze_market_sentiment
@@ -232,7 +232,7 @@ def sync_analyze_market():
 #### 2. 从 Module 9 (回测) 调用
 ```python
 # 在回测模块中获取市场情感数据
-from module_04_market_analysis.sentiment_analysis.fin_r1_sentiment import get_sentiment_analyzer
+from module_04_market_analysis.sentiment_analysis.AI_Model_sentiment import get_sentiment_analyzer
 
 class BacktestEngine:
     def __init__(self):
@@ -385,7 +385,7 @@ python tests/module04_market_analysis_test.py
 ### 测试覆盖内容
 1. **模块导入测试**: 验证所有组件正确导入
 2. **真实数据采集**: 测试数据源集成
-3. **情感分析功能**: 测试FIN-R1和增强情感分析
+3. **情感分析功能**: 测试AI Model和增强情感分析
 4. **异常检测**: 测试价格、成交量和多维异常检测
 5. **相关性分析**: 测试股票相关性计算
 6. **市场状态检测**: 测试HMM和其他状态检测方法
@@ -444,7 +444,7 @@ ConnectionError: Failed to connect to API
 python main.py
 ```
 
-### 4. FIN-R1模型问题
+### 4. AI Model模型问题
 ```bash
 Model not found or failed to load
 ```
@@ -456,6 +456,6 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 # 启用详细日志
-from module_04_market_analysis.sentiment_analysis.fin_r1_sentiment import FINR1SentimentAnalyzer
+from module_04_market_analysis.sentiment_analysis.AI_Model_sentiment import FINR1SentimentAnalyzer
 analyzer = FINR1SentimentAnalyzer()
 ```

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div ref="messagesRef" class="messages-container">
     <!-- 空状态 -->
     <div v-if="messages.length === 0" class="empty-state">
@@ -6,7 +6,7 @@
         <v-avatar color="primary" variant="tonal" size="64" class="mb-3">
           <v-icon size="32">mdi-chat-outline</v-icon>
         </v-avatar>
-        <h2 class="text-h5 font-weight-bold mb-2">欢迎使用 FIN-R1 AI助手</h2>
+        <h2 class="text-h5 font-weight-bold mb-2">欢迎使用 AI Model AI助手</h2>
         <p class="text-body-1 text-medium-emphasis mb-4">向AI助手描述您的投资需求，获取个性化建议</p>
         
         <!-- 快速开始卡片 -->

@@ -1,8 +1,8 @@
-# Module 10 - AI交互模块配置文件
+﻿# Module 10 - AI交互模块配置文件
 
-# FIN-R1模型配置
-fin_r1:
-  model_path: ".Fin-R1"  # 模型路径
+# AI Model模型配置
+AI_Model:
+  model_path: ".AI Model"  # 模型路径
   device: "cpu"  # 使用设备: cpu/cuda
   batch_size: 32
   max_length: 512
@@ -98,7 +98,7 @@ logging:
   level: "INFO"  # DEBUG/INFO/WARNING/ERROR
   log_intent_classification: true
   log_parameter_mapping: true
-  log_fin_r1_calls: true
+  log_AI_Model_calls: true
   log_session_events: true
 
 # 性能配置

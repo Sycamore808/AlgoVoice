@@ -86,7 +86,7 @@
 **对外接口**: 编程接口 + REST API
 **数据库**: `data/module04_market_analysis.db`
 **主要类**:
-- `FINR1SentimentAnalyzer`: FIN-R1情感分析
+- `FINR1SentimentAnalyzer`: AI Model情感分析
 - `EnhancedNewsSentimentAnalyzer`: 增强情感分析
 - `PriceAnomalyDetector`: 价格异常检测
 - `MarketRegimeDetector`: 市场状态检测
@@ -217,7 +217,7 @@
 - `StrategyRecommender`: 策略推荐器
 - `ConversationManager`: 对话管理器
 - `KnowledgeBase`: 知识库
-- `FinR1Integration`: FIN-R1模型集成
+- `FinR1Integration`: AI Model模型集成
 
 **模块间调用**:
 - 调用Module 01获取数据状态

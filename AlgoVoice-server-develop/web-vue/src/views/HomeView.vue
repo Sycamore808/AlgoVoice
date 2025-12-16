@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="home-view">
     <!-- 视频播放模态框 -->
     <div v-if="showVideoModal" class="video-modal" @click="closeVideoModal">
@@ -59,7 +59,7 @@
         <div class="hero-content">
           <div class="hero-badge">
             <i class="fas fa-chart-line"></i>
-            <span>FIN-R1赋能的自适应量化投资引擎</span>
+            <span>AI Model赋能的自适应量化投资引擎</span>
           </div>
           
           <h1 class="hero-title">
@@ -68,7 +68,7 @@
           </h1>
           
           <p class="hero-subtitle">
-            基于FIN-R1深度学习模型，整合12大专业模块，<br />
+            基于AI Model深度学习模型，整合12大专业模块，<br />
             结合前沿人工智能与深度量化分析，为专业投资者打造的下一代智能投资平台
           </p>
           
@@ -329,7 +329,7 @@ const chartRef = ref(null)
 const features = [
   { 
     icon: 'fas fa-brain', 
-    title: 'FIN-R1 AI', 
+    title: 'AI Model AI', 
     description: '采用先进的深度学习算法和神经网络模型，实时分析海量市场数据，挖掘隐藏的交易机会。通过多层次特征提取和模式识别，为您提供精准的市场预测和智能化投资建议，让AI成为您的专业投资顾问。', 
     color: 'linear-gradient(135deg, #667eea, #764ba2)',
     background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.06) 100%)',
@@ -459,10 +459,10 @@ const modules = [
   },
   { 
     title: 'AI交互', 
-    description: 'FIN-R1对话系统',
+    description: 'AI Model对话系统',
     icon: 'fas fa-robot',
     gradient: 'linear-gradient(45deg, #667eea, #764ba2)',
-    caption: '与FIN-R1 AI对话，获取专业投资建议，像和顶级分析师交流一样简单！'
+    caption: '与AI Model AI对话，获取专业投资建议，像和顶级分析师交流一样简单！'
   },
   { 
     title: '可视化', 

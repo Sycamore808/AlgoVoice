@@ -2,7 +2,7 @@
 
 ## 概述
 
-AI交互模块是 AlgoVoice 量化交易系统的智能交互入口，集成FIN-R1模型提供自然语言理解能力，支持用户通过对话方式表达投资需求，系统自动解析并生成量化策略参数。
+AI交互模块是 AlgoVoice 量化交易系统的智能交互入口，集成AI Model模型提供自然语言理解能力，支持用户通过对话方式表达投资需求，系统自动解析并生成量化策略参数。
 
 ## 主要功能
 
@@ -23,8 +23,8 @@ AI交互模块是 AlgoVoice 量化交易系统的智能交互入口，集成FIN-
 - **RecommendationEngine**: 投资组合和策略推荐
 - **个性化推荐**: 基于用户画像的推荐
 
-### 5. FIN-R1集成
-- **FINR1Integration**: FIN-R1模型调用封装
+### 5. AI Model集成
+- **FINR1Integration**: AI Model模型调用封装
 - **深度语义理解**: 投资需求深度解析
 
 ## 快速开始
@@ -434,7 +434,7 @@ for rec in recommendations:
 
 ### FINR1Integration
 
-FIN-R1模型集成，提供深度语义理解。
+AI Model模型集成，提供深度语义理解。
 
 #### 主要方法
 
@@ -448,12 +448,12 @@ FIN-R1模型集成，提供深度语义理解。
   - `timestamp`: 时间戳
 - 示例：
 ```python
-fin_r1 = FINR1Integration(config={
-    'model_path': '../Fin-R1',
+AI_Model = FINR1Integration(config={
+    'model_path': '../AI Model',
     'device': 'cpu'
 })
 
-result = await fin_r1.process_request(
+result = await AI_Model.process_request(
     "我想投资成长型股票，风险适中，期望年化20%"
 )
 print(result['parsed_requirement'])
@@ -524,8 +524,8 @@ for record in records:
 - 保存意图分类日志
 - 返回：是否成功
 
-**save_fin_r1_log(user_input: str, model_output: Optional[Dict[str, Any]], processing_time: float, success: bool, session_id: Optional[str] = None, error_message: Optional[str] = None) -> bool**
-- 保存FIN-R1调用日志
+**save_AI_Model_log(user_input: str, model_output: Optional[Dict[str, Any]], processing_time: float, success: bool, session_id: Optional[str] = None, error_message: Optional[str] = None) -> bool**
+- 保存AI Model调用日志
 - 返回：是否成功
 
 **get_statistics() -> Dict[str, Any]**
@@ -539,7 +539,7 @@ print(f"总需求数: {stats['total_requirements']}")
 print(f"总推荐数: {stats['total_recommendations']}")
 print(f"接受率: {stats['accepted_recommendations']/stats['total_recommendations']:.2%}")
 print(f"平均回合数: {stats['avg_turns_per_session']}")
-print(f"FIN-R1成功率: {stats['fin_r1_success_rate']:.2%}")
+print(f"AI Model成功率: {stats['AI_Model_success_rate']:.2%}")
 ```
 
 ## 完整工作流示例
@@ -730,16 +730,16 @@ for module_name in ['module_03_ai_models', 'module_05_risk_management', 'module_
 print("完整流程执行完毕！")
 ```
 
-### 3. 使用FIN-R1模型
+### 3. 使用AI Model模型
 
 ```python
 import asyncio
 from module_10_ai_interaction import FINR1Integration, get_database_manager
 
-async def process_with_fin_r1():
-    # 初始化FIN-R1
-    fin_r1 = FINR1Integration(config={
-        'model_path': '../Fin-R1',
+async def process_with_AI_Model():
+    # 初始化AI Model
+    AI_Model = FINR1Integration(config={
+        'model_path': '../AI Model',
         'device': 'cpu',
         'temperature': 0.7
     })
@@ -754,19 +754,19 @@ async def process_with_fin_r1():
     start_time = time.time()
     
     try:
-        # 调用FIN-R1处理
-        result = await fin_r1.process_request(user_input)
+        # 调用AI Model处理
+        result = await AI_Model.process_request(user_input)
         processing_time = time.time() - start_time
         
         # 保存日志
-        db_manager.save_fin_r1_log(
+        db_manager.save_AI_Model_log(
             user_input=user_input,
             model_output=result,
             processing_time=processing_time,
             success=True
         )
         
-        print("FIN-R1处理结果:")
+        print("AI Model处理结果:")
         print(f"  解析的需求: {result['parsed_requirement']}")
         print(f"  策略参数: {result['strategy_params']}")
         print(f"  风险参数: {result['risk_params']}")
@@ -776,18 +776,18 @@ async def process_with_fin_r1():
         
     except Exception as e:
         processing_time = time.time() - start_time
-        db_manager.save_fin_r1_log(
+        db_manager.save_AI_Model_log(
             user_input=user_input,
             model_output=None,
             processing_time=processing_time,
             success=False,
             error_message=str(e)
         )
-        print(f"FIN-R1处理失败: {e}")
+        print(f"AI Model处理失败: {e}")
         return None
 
 # 运行
-result = asyncio.run(process_with_fin_r1())
+result = asyncio.run(process_with_AI_Model())
 ```
 
 ## 数据存储
@@ -839,7 +839,7 @@ Module 10 使用 SQLite 数据库存储以下数据：
 - `timestamp`: 时间戳
 - `created_at`: 创建时间
 
-#### 5. fin_r1_logs (FIN-R1日志表)
+#### 5. AI_Model_logs (AI Model日志表)
 - `id`: 日志ID
 - `session_id`: 会话ID
 - `user_input`: 用户输入
@@ -909,9 +909,9 @@ print(f"平均回合数: {stats['avg_turns_per_session']}")
 配置文件位于 `config/ai_interaction_config.yaml`，主要配置项：
 
 ```yaml
-# FIN-R1模型配置
-fin_r1:
-  model_path: "../Fin-R1"
+# AI Model模型配置
+AI_Model:
+  model_path: "../AI Model"
   device: "cpu"
   temperature: 0.7
 
@@ -941,7 +941,7 @@ with open('module_10_ai_interaction/config/ai_interaction_config.yaml', 'r') as 
     config = yaml.safe_load(f)
 
 # 使用配置
-fin_r1 = FINR1Integration(config['fin_r1'])
+AI_Model = FINR1Integration(config['AI_Model'])
 ```
 
 ## 数据类型
@@ -1004,11 +1004,11 @@ python tests/module10_ai_interaction_test.py
 
 ## 注意事项
 
-1. **FIN-R1模型路径**: 确保 FIN-R1 模型位于 `../Fin-R1` 目录
+1. **AI Model模型路径**: 确保 AI Model 模型位于 `../AI Model` 目录
 2. **数据库路径**: 数据库文件自动创建在 `data/module10_ai_interaction.db`
 3. **依赖项**: 需要安装 `jieba`, `sklearn`, `torch`, `transformers` 等依赖
 4. **中文支持**: 所有组件都针对中文金融文本进行了优化
-5. **异步支持**: FIN-R1集成支持异步调用，使用 `await` 关键字
+5. **异步支持**: AI Model集成支持异步调用，使用 `await` 关键字
 6. **参数验证**: 建议在使用参数前调用 `validate_parameters` 进行验证
 7. **对话状态**: 对话管理器会自动管理状态转换，无需手动控制
 
@@ -1024,8 +1024,8 @@ except QuantSystemError as e:
     print(f"需求解析失败: {e}")
 
 try:
-    # 调用FIN-R1
-    result = await fin_r1.process_request(user_input)
+    # 调用AI Model
+    result = await AI_Model.process_request(user_input)
 except ModelError as e:
     print(f"模型调用失败: {e}")
 ```
@@ -1046,11 +1046,11 @@ for user_input in user_inputs:
     db_manager.save_user_requirement(...)
 ```
 
-3. **异步处理**: 使用异步方法处理FIN-R1调用
+3. **异步处理**: 使用异步方法处理AI Model调用
 ```python
 import asyncio
 
-tasks = [fin_r1.process_request(input) for input in inputs]
+tasks = [AI_Model.process_request(input) for input in inputs]
 results = await asyncio.gather(*tasks)
 ```
 
@@ -1065,7 +1065,7 @@ Module 10 AI交互模块提供了完整的自然语言理解和对话管理能�
 - ✓ 多轮对话状态管理（8种状态）
 - ✓ 参数映射（支持5个目标模块）
 - ✓ 投资推荐引擎（组合推荐、策略推荐、风险调整）
-- ✓ FIN-R1模型集成
+- ✓ AI Model模型集成
 - ✓ 对话历史管理（SQLite/JSON/内存）
 - ✓ 完整的数据库支持（7张表）
 

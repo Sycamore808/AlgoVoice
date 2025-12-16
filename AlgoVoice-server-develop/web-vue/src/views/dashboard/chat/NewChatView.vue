@@ -1,11 +1,11 @@
-<template>
+﻿<template>
   <v-container fluid class="new-chat-view pa-6">
     <v-card rounded="xl" class="pa-6">
       <v-card-title class="text-h4 font-weight-bold mb-2">
         <v-icon start color="primary" size="32">mdi-chat-plus-outline</v-icon>
         开始新对话
       </v-card-title>
-      <v-card-subtitle class="text-h6 mb-6">与FIN-R1智能助手交流您的投资需求</v-card-subtitle>
+      <v-card-subtitle class="text-h6 mb-6">与AI Model智能助手交流您的投资需求</v-card-subtitle>
       
       <v-divider class="mb-6"></v-divider>
       

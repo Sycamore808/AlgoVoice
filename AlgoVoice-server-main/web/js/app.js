@@ -1,4 +1,4 @@
-// FinLoom Web应用主逻辑
+﻿// FinLoom Web应用主逻辑
 
 class FinLoomApp {
     constructor() {
@@ -1055,13 +1055,13 @@ class FinLoomApp {
                     <div class="card-header">
                         <h6 class="mb-0">
                             <i class="fas fa-heart me-2"></i>
-                            智能情感分析 (FIN-R1模型)
+                            智能情感分析 (AI Model模型)
                         </h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <p><strong>分析器:</strong> ${sentiment_analysis.analyzer_model || 'FIN-R1'}</p>
+                                <p><strong>分析器:</strong> ${sentiment_analysis.analyzer_model || 'AI Model'}</p>
                                 <p><strong>文本数量:</strong> ${sentiment_analysis.text_count || 1}</p>
                             </div>
                             <div class="col-md-6">

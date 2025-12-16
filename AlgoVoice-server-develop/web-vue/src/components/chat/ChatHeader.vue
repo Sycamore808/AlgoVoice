@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <v-card-text class="pa-4">
     <div class="d-flex justify-space-between align-center">
       <div class="d-flex align-center">
@@ -6,7 +6,7 @@
           <v-icon size="24">mdi-robot-outline</v-icon>
         </v-avatar>
         <div>
-          <div class="text-h6 font-weight-medium">FIN-R1 AI助手</div>
+          <div class="text-h6 font-weight-medium">AI Model AI助手</div>
           <div class="text-caption text-medium-emphasis">
             <v-chip 
               size="x-small" 

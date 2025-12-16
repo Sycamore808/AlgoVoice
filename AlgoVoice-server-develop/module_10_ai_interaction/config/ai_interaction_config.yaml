@@ -1,6 +1,6 @@
-# Module 10 - AI交互模块配置文件
+﻿# Module 10 - AI交互模块配置文件
 
-# FIN-R1模型相关配置已移除，现在统一使用阿里云AI服务
+# AI Model模型相关配置已移除，现在统一使用阿里云AI服务
 
 # NLP处理器配置
 nlp:
@@ -91,7 +91,7 @@ logging:
   level: "INFO"  # DEBUG/INFO/WARNING/ERROR
   log_intent_classification: true
   log_parameter_mapping: true
-  log_fin_r1_calls: true
+  log_AI_Model_calls: true
   log_session_events: true
 
 # 性能配置
