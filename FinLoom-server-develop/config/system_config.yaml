@@ -1,0 +1,42 @@
+# 系统配置文件
+
+# 日志配置
+logging:
+  level: INFO
+  format: "%(asctime)s | %(levelname)s | %(name)s:%(funcName)s:%(lineno)d | %(message)s"
+  file_path: "logs/system.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5
+
+# 数据库配置
+database:
+  type: duckdb
+  path: "data/finloom.db"
+  max_connections: 10
+
+# 缓存配置
+cache:
+  type: memory
+  max_size: 1000
+  ttl_seconds: 3600
+
+# 并发配置
+concurrency:
+  max_workers: 4
+  thread_pool_size: 10
+  async_timeout: 30
+
+# 系统监控
+monitoring:
+  enable: true
+  metrics_port: 8001
+  health_check_interval: 60
+
+# AI模型配置
+ai_model:
+  provider: aliyun  # 使用阿里云API
+  aliyun:
+    api_key: "sk-97c76c35db024c3094ac8efd814dada5"  # 阿里云API密钥
+    model: "qwen-plus"  # 可选: qwen-turbo, qwen-plus, qwen-max
+    temperature: 0.7
+    max_tokens: 2000

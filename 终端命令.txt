@@ -1,0 +1,63 @@
+====================================
+AlgoVoice 上传到 Github 终端命令
+====================================
+
+请按顺序复制粘贴以下命令到 Cursor 终端（Ctrl + `）
+
+------------------------------------
+第1步：配置 Git 用户信息（只需执行一次）
+------------------------------------
+
+git config --global user.name "Sycamore808"
+git config --global user.email "your-email@example.com"
+
+注意：将 your-email@example.com 替换为你的 Github 邮箱！
+
+
+------------------------------------
+第2步：添加所有文件并提交
+------------------------------------
+
+git add .
+git commit -m "Initial commit: AlgoVoice智能量化投资引擎"
+
+
+------------------------------------
+第3步：连接到你的 AlgoVoice 仓库
+------------------------------------
+
+git remote add origin https://github.com/Sycamore808/AlgoVoice.git
+git branch -M main
+
+
+------------------------------------
+第4步：推送到 Github
+------------------------------------
+
+git push -u origin main --force
+
+注意：由于仓库已存在LICENSE文件，使用 --force 覆盖
+
+
+------------------------------------
+完成！访问查看：
+------------------------------------
+
+https://github.com/Sycamore808/AlgoVoice
+
+
+====================================
+如果遇到错误：
+====================================
+
+错误1：remote origin already exists
+解决：git remote remove origin
+      然后重新执行第3步
+
+错误2：Authentication failed
+解决：需要输入 Github Personal Access Token
+      生成方法：Github → Settings → Developer settings → 
+               Personal access tokens → Generate new token
+
+====================================
+

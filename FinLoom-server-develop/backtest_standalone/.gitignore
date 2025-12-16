@@ -1,0 +1,23 @@
+# Data files
+wind_data/
+backtest_results/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+
+
+
+
+
+

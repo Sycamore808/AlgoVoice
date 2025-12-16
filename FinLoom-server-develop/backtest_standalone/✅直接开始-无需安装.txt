@@ -1,0 +1,157 @@
+========================================
+  Ready to Use - No Installation Needed!
+  直接可用 - 无需安装！
+========================================
+
+Your System Setup:
+------------------
+✓ WindPy installed: F:\Conda
+✓ MATLAB version: F:\SOFTWARE\MATLAB
+✓ System Python ready
+
+No need to install WindPy!
+We will use your existing installation.
+
+========================================
+  Quick Start (2 Steps Only!)
+  快速开始（只需2步！）
+========================================
+
+STEP 1: Install Data Science Packages
+--------------------------------------
+(Only if not installed: pandas, numpy, matplotlib, seaborn)
+
+Optional: Run install_packages.bat
+Or skip if you already have these packages
+
+STEP 2: Test Wind & Run
+------------------------
+1. Open Wind Terminal & Login
+   打开Wind终端并登录
+
+2. Test connection:
+   测试连接:
+   Run: test_wind.bat
+
+3. If test passes, download data:
+   测试通过后，下载数据:
+   Run: download_data.bat (2-5 hours first time)
+
+4. Run backtest:
+   运行回测:
+   Run: run_backtest.bat (30min-2hr)
+
+========================================
+  What Changed
+  改变了什么
+========================================
+
+Before (之前):
+  - Need to install WindPy in .venv
+  - Complex setup
+  - Virtual environment
+
+Now (现在):
+  - Use your existing WindPy (F:\Conda)
+  - Simple & direct
+  - No virtual environment needed
+
+========================================
+  File List
+  文件列表
+========================================
+
+backtest_standalone/
+├── install_packages.bat     (optional, 可选)
+├── test_wind.bat            <- Start here! 从这里开始！
+├── download_data.bat        <- Then this
+├── run_backtest.bat         <- Finally this
+├── README.txt
+├── USAGE.txt
+└── ✅直接开始-无需安装.txt   (this file)
+
+========================================
+  Start Now
+  现在开始
+========================================
+
+1. Go to: backtest_standalone/
+   进入文件夹
+
+2. Open Wind Terminal & Login
+   打开Wind终端并登录
+
+3. Run: test_wind.bat
+   运行测试
+
+4. If success, continue with:
+   如果成功，继续:
+   - download_data.bat
+   - run_backtest.bat
+
+No installation needed!
+无需安装！
+
+========================================
+  Your WindPy Paths
+  你的WindPy路径
+========================================
+
+Primary: F:\Conda
+Backup: F:\SOFTWARE\MATLAB
+
+Both are accessible by system Python.
+系统Python可以访问这两个路径。
+
+Scripts will use whichever is in your PATH.
+脚本会使用PATH中的版本。
+
+========================================
+  Troubleshooting
+  故障排除
+========================================
+
+Q: Still says "WindPy not found"?
+A: Check your Python installation:
+   python -c "import WindPy; print(WindPy.__file__)"
+   
+   Should show: F:\Conda\... or F:\SOFTWARE\MATLAB\...
+
+Q: Want to check which Python is used?
+A: Run: python --version
+   And: where python
+
+Q: Need to install pandas/numpy?
+A: Run: install_packages.bat
+   Or: pip install pandas numpy matplotlib seaborn
+
+========================================
+  Summary
+  总结
+========================================
+
+Your advantage:
+你的优势:
+  ✓ WindPy already installed
+  ✓ No complex setup needed
+  ✓ Just test & run!
+
+Time saved: 10-15 minutes (no installation)
+节省时间: 10-15分钟（无需安装）
+
+Steps: Just 2 steps instead of 4
+步骤: 只需2步，而不是4步
+
+Ready to start:
+准备开始:
+  -> test_wind.bat
+
+========================================
+
+
+
+
+
+
+
+
