@@ -83,3 +83,13 @@ conversation_history/conversations.db
 # 敏感配置文件（如果包含API密钥等）
 # config/*_config.yaml
 
+# 大作业报告和论文文档（本地保留，不上传）
+金融计量学*.pdf
+金融计量学*.tex
+references.bib
+figures/
+template/
+*.png
+Github仓库设置指南.md
+项目清理计划.md
+
